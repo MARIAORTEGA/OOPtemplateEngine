@@ -10,7 +10,6 @@ const outputPath = path.join(OUTPUT_DIR, "main.html");
 
 const render = require("./lib/htmlRenderer");
 
-
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
@@ -19,25 +18,39 @@ const render = require("./lib/htmlRenderer");
 // generate and return a block of HTML including templated divs for each employee!
 
 var EmployeeTeam = [];
-function Teamcreator () {
-    inquirer.prompt ([
-        {type: 'input',
-        name: 'members',
-        message: 'how many team members do you want?'
-    }
-    
-    ]).then(answers => {
-        console.log (answers)
-        buildHTML()
-    })
-
-    
+function Teamcreator() {
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        name: "members",
+        message: "Please build your team. How many team members do you want?",
+      },
+      {
+        type: "input",
+        name: "Employee",
+        message: "What is the name of your employee?",
+      },
+      {
+        type: "input",
+        name: "Employee",
+        message: "What is the id of your employee?",
+      },
+      {
+        type: "input",
+        name: "Employee",
+        message: "What is the email of your employee?",
+      },
+    ])
+    .then((answers) => {
+      console.log(answers);
+      buildHTML();
+    });
 }
 
-function buildHTML (){
-    fs.writeFileSync( outputPath, render(EmployeeTeam), "UTF-8")
+function buildHTML() {
+  fs.writeFileSync(outputPath, render(EmployeeTeam), "UTF-8");
 }
-
 
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the
@@ -54,4 +67,4 @@ function buildHTML (){
 // for further information. Be sure to test out each class and verify it generates an
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work! ```
-Teamcreator()
+Teamcreator();
