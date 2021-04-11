@@ -28,18 +28,18 @@ function Teamcreator() {
       },
       {
         type: "input",
-        name: "Employee",
+        name: "name",
         message: "What is the name of your employee?",
       },
       {
         type: "input",
-        name: "Employee",
+        name: "id",
         message: "What is the id of your employee?",
       },
       {
         type: "input",
-        name: "Employee",
-        message: "What is the email of your employee?",
+        name: "Email",
+        message: "What is the Email of your employee?",
       },
     ])
     .then((answers) => {
