@@ -1,3 +1,6 @@
+function createHTML(data) {
+    
+return 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +34,7 @@
 <body>
           <div class="card employee-card">
             <div class="card-header">
-                <h2 class="card-title">{{ name }}</h2>
+                <h2 class="card-title">{{ this.name }}</h2>
                 <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>{{ role }}</h3>
             </div>
             <div class="card-body">
@@ -45,7 +48,7 @@
 
         <div class="card employee-card">
             <div class="card-header">
-                <h2 class="card-title">{{ name }}</h2>
+                <h2 class="card-title">{{ $(this.name) }}</h2>
                 <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>{{ role }}</h3>
             </div>
             <div class="card-body">
@@ -77,3 +80,5 @@
     </body>
 
 </html>
+}
+module.exports = createHTML;

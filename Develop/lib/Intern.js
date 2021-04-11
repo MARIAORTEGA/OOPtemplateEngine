@@ -5,6 +5,7 @@ class Intern extends Employee {
     name = this.name;
     id = this.id;
     email = this.email;
+    school = this.school;
   }
   getName() {
     return this.name;
@@ -15,6 +16,9 @@ class Intern extends Employee {
   }
   getEmail() {
     return this.email;
+  }
+  getSchool() {
+    return this.school;
   }
   getRole() {
     return "Intern";
