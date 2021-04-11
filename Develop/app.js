@@ -41,6 +41,58 @@ function Teamcreator() {
         name: "Email",
         message: "What is the Email of your employee?",
       },
+
+      {
+        type: "input",
+        name: "name",
+        message: "What is the name of your Manager?",
+      },
+      {
+        type: "input",
+        name: "id",
+        message: "What is the id of your Manager?",
+      },
+      {
+        type: "input",
+        name: "Email",
+        message: "What is the Email of your Manager?",
+      },
+      {
+        type: "input",
+        name: "name",
+        message: "What is the name of your Intern?",
+      },
+      {
+        type: "input",
+        name: "id",
+        message: "What is the id of your Intern?",
+      },
+      {
+        type: "input",
+        name: "Email",
+        message: "What is the Email of your Intern?",
+      },
+      {
+        type: "input",
+        name: "name",
+        message: "What is the name of your Engineer?",
+      },
+      {
+        type: "input",
+        name: "id",
+        message: "What is the id of your Engineer?",
+      },
+      {
+        type: "input",
+        name: "Email",
+        message: "What is the Email of your Engineer?",
+      },
+      {
+        type: "list",
+        name: "question",
+        message: "Would you like to continue?",
+        choices: ["yes", "no"],
+      },
     ])
     .then((answers) => {
       console.log(answers);
